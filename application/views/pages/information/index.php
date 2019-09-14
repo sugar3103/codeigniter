@@ -1,0 +1,1 @@
+<p>This is the <strong><?= $title ?></strong> page</p>
