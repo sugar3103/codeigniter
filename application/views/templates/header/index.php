@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+
+
 <html lang="en">
 
 <head>
@@ -7,24 +9,111 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon.ico"> -->
     <link rel="stylesheet" href="https://bootswatch.com/4/united/bootstrap.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
 
     <title>Sugar TodoList Application with CodeIgniter</title>
 </head>
 <style>
-.main_page {
-    color: red;
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: url('https://images.pexels.com/photos/1021068/pexels-photo-1021068.jpeg') no-repeat;
+    background-size: cover;
+}
+
+.heading {
+    width: 100%;
+    margin: 30px auto;
+    text-align: center;
+    color: blue;
+    background: #FFF8DC;
+    border-radius: 20px;
+    background: inherit;
+}
+
+.modal-open-box {
+    margin-left: 40% !important;
+    background: #1e87f0 !important;
+}
+
+form {
+    width: 90%;
+    padding: 5px 0 5px 30px;
+    margin: 30px auto;
+    background: inherit;
+}
+
+
+.task_input {
+    width: 80%;
+    padding: 5px;
+    margin: 5px 0 5px 0;
+}
+
+.task_checkbox {
+    height: 30px;
+}
+
+.add_btn {
+    background: #1e87f0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+table {
+    width: 90%;
+    margin: 30px auto;
+    border-collapse: collapse;
+}
+
+tr {
+    border-bottom: 1px solid #cbcbcb;
+}
+
+th {
+    font-size: 19px;
+    color: blue
+}
+
+th,
+td {
+    border: none;
+    height: 30px;
+    padding: 2px;
+    font-weight: bold;
+}
+
+tr:hover {
+    background: #E9E9E9;
+}
+
+.task {
+    text-align: left;
+}
+
+.delete {
+    text-align: center;
+}
+
+.delete a {
+    color: white;
+    background: #a52a2a;
+    padding: 1px 6px;
+    border-radius: 3px;
+    text-decoration: none;
 }
 </style>
-<section class="main_page">
-    <a href="<?php echo base_url(); ?>css/test-css.php" style="margin: 10px 0 10px 50px">
-        <!-- <img src="../../favicon/apple-touch-icon.png" width="80px"> -->
-        Đi tới trang chủ
-    </a>
-    <p><?php echo base_url(); ?></p>
+<section>
     <nav class="navbar navbar-expand-md navbar-dark bg-primary">
-        <a class="navbar-brand" href="<?php echo base_url(); ?>">Speedlink</a>
+        <a class="navbar-brand" href="<?php echo base_url(); ?>">CodeIgniter</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
             aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -45,7 +134,7 @@
                     <a class="nav-link" href="about">About</a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
+            <form class="form-inline my-2 my-lg-0" action="search">
                 <input class="form-control mr-sm-2" type="text" placeholder="Search">
                 <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
             </form>
