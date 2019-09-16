@@ -83,64 +83,66 @@
                 value="Tìm kiếm trực tiếp ở đây vẫn chưa hoạt động, phải chuyển sang trang khác ------->">
             <button type="submit" class="add_btn">Tới trang tìm kiếm</button>
         </form>
-        <table>
-            <thead>
-                <tr>
-                    <th>No</th>
-                    <th>Task</th>
-                    <th>Assign</th>
-                    <th>Email</th>
-                    <th>Done</th>
-                    <th>Action</th>
-                    <th>Delete</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
+        <div class="container">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Task</th>
+                        <th>Assign</th>
+                        <th>Email</th>
+                        <th>Done</th>
+                        <th>Action</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
                     $i = 1;
                     while ($row = mysqli_fetch_array($tasks)) { ?>
-                <tr>
-                    <td class="delete"><?php echo $i; ?></td>
-                    <td class="task"><?php echo $row['task']; ?></td>
-                    <td class="task"><?php echo $row['assign']; ?></td>
-                    <td class="task"><?php echo $row['email']; ?></td>
-                    <td class="task"><input type="checkbox" class="task_input task_checkbox"></td>
-                    <td class="delete">
-                        <a href="edit?id=<?php echo $row['id'] ?>">Edit</a>
-                    </td>
-                    <td class="delete">
-                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
-                            data-target="#<?php echo $row['id']; ?>Modal">X</button>
-                        <!-- Modal -->
-                        <div class="modal fade" id="<?php echo $row['id']; ?>Modal" role="dialog">
-                            <div class="modal-dialog">
+                    <tr>
+                        <td class="delete"><?php echo $i; ?></td>
+                        <td class="task"><?php echo $row['task']; ?></td>
+                        <td class="task"><?php echo $row['assign']; ?></td>
+                        <td class="task"><?php echo $row['email']; ?></td>
+                        <td class="task"><input type="checkbox" class="task_input task_checkbox"></td>
+                        <td class="delete">
+                            <a href="edit?id=<?php echo $row['id'] ?>">Edit</a>
+                        </td>
+                        <td class="delete">
+                            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
+                                data-target="#<?php echo $row['id']; ?>Modal">X</button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="<?php echo $row['id']; ?>Modal" role="dialog">
+                                <div class="modal-dialog">
 
-                                <!-- Modal content-->
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        <h4 class="modal-title">Bạn có chắc chắn muốn xoá task có ID
-                                            <?php echo $row['id']; ?> ?</h4>
-                                    </div>
-                                    <!-- <div class="modal-body">
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title">Bạn có chắc chắn muốn xoá task có ID
+                                                <?php echo $row['id']; ?> ?</h4>
+                                        </div>
+                                        <!-- <div class="modal-body">
                                            
                                         </div> -->
-                                    <div class="modal-footer">
-                                        <a href="index.php?del_task=<?php echo $row['id']; ?>">
-                                            Xoá ID <?php echo $row['id']; ?></a>
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Huỷ
-                                            bỏ</button>
+                                        <div class="modal-footer">
+                                            <a href="index.php?del_task=<?php echo $row['id']; ?>">
+                                                Xoá ID <?php echo $row['id']; ?></a>
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Huỷ
+                                                bỏ</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </td>
-                </tr>
-                <?php
+                        </td>
+                    </tr>
+                    <?php
                     $i++;
                 } ?>
-            </tbody>
-        </table>
+                </tbody>
+            </table>
+        </div>
     </section>
 </body>
 

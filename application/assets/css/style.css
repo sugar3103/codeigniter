@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+	background: url('https://images.pexels.com/photos/1021068/pexels-photo-1021068.jpeg') no-repeat;
+	color: red;
+    background-size: cover;
+}
+
+.heading {
+    width: 100%;
+    margin: 30px auto;
+    text-align: center;
+    color: blue;
+    background: #FFF8DC;
+    border-radius: 20px;
+    background: inherit;
+}
+
+.modal-open-box {
+    margin-left: 40% !important;
+    background: #1e87f0 !important;
+}
+
+form {
+    width: 90%;
+    padding: 5px 0 5px 30px;
+    margin: 30px auto;
+    background: inherit;
+}
+
+
+.task_input {
+    width: 80%;
+    padding: 5px;
+    margin: 5px 0 5px 0;
+    border-radius: 5px;
+    box-shadow: 0px;
+}
+
+.task_checkbox {
+    height: 30px;
+}
+
+.add_btn {
+    background: #1e87f0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+table {
+    width: 90%;
+    margin: 30px auto;
+    border-collapse: collapse;
+}
+
+tr {
+    border-bottom: 1px solid #cbcbcb;
+}
+
+th {
+    font-size: 19px;
+    color: blue
+}
+
+th,
+td {
+    border: none;
+    height: 30px;
+    padding: 2px;
+    font-weight: bold;
+}
+
+tr:hover {
+    background: #E9E9E9;
+}
+
+.task {
+    text-align: left;
+}
+
+.delete {
+    text-align: center;
+}
+
+.delete a {
+    color: white;
+    background: #a52a2a;
+    padding: 1px 6px;
+    border-radius: 3px;
+    text-decoration: none;
+}

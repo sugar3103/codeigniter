@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon.ico"> -->
+    <!-- <link ref="stylesheet" href="<?php echo base_url() . 'assets/css/style.css' ?>"> -->
     <link rel="stylesheet" href="https://bootswatch.com/4/united/bootstrap.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -53,6 +54,8 @@ form {
     width: 80%;
     padding: 5px;
     margin: 5px 0 5px 0;
+    border-radius: 5px;
+    box-shadow: 0px;
 }
 
 .task_checkbox {
@@ -134,9 +137,11 @@ tr:hover {
                     <a class="nav-link" href="about">About</a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0" action="search">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+            <form class="navbar-form navbar-right" action="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Search</button>
             </form>
         </div>
     </nav>
