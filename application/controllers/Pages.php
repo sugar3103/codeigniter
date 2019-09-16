@@ -4,8 +4,11 @@
             if(!file_exists(APPPATH.'views/pages/'.$page.'/index.php')){
                 show_404();
             }
+            
             $data['title'] = ucfirst($page);
-
+            
+            $this->load->helper('url');
+            // $this->load->helper('html');
             $this->load->view('templates/header/index.php');
             $this->load->view('pages/'.$page.'/index', $data);
             $this->load->view('templates/footer/index.php');
