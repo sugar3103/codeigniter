@@ -30,6 +30,14 @@
     $tasks = mysqli_query($db, "SELECT * FROM tasks") 
 ?>
 
+<script>
+const loading = document.getElementById('loading');
+setTimeout(function() {
+    document.getElementById('loading').style.display = "none";
+    document.getElementById('after-loading').style.display = "block";
+}, 3000);
+</script>
+
 <style>
 
 </style>
@@ -40,7 +48,10 @@
             <h2>Sugar Todo List Application with PHP and MySQL<h2>
         </div>
     </header>
-    <section>
+    <section id="loading">
+
+    </section>
+    <section style="display: none" id="after-loading">
         <div class="container">
             <!-- Trigger the modal with a button -->
             <button type="button" class="btn btn-info btn-lg modal-open-box" data-toggle="modal" data-target="#myModal">
@@ -142,8 +153,10 @@
                 } ?>
                 </tbody>
             </table>
+
         </div>
     </section>
 </body>
+
 
 </html>
